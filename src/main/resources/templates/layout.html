@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+  <!-- sbb CSS -->
+  <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+  <title>Hello, sbb!</title>
+</head>
+<body>
+  <!-- navgation bar -->
+  <nav th:replace="~{navbar :: navbarFragment}"></nav>
+  <!-- basic template start -->
+  <th:block layout:fragment="content">
+
+  </th:block>
+  <!-- basic template end -->
+  <!-- bootstrap JS -->
+  <script th:src="@{/bootstrap.min.js}"></script>
+</body>
+</html>
