@@ -22,6 +22,8 @@ public class Answer {
     @CreatedDate
     private LocalDateTime createDate;
 
+    private LocalDateTime modifyDate;
+
     @ManyToOne // FK의 관계가 생성, 즉 답변은 Many(자식), 질문은 One(부모)
     private Question question;
     // 반대로 @OneToMany의 관계도 있으며, @ManyToMany도 존재

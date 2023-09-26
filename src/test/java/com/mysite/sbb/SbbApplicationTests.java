@@ -166,7 +166,7 @@ class SbbApplicationTests {
         for(int i=1; i <= 300; i++) {
             String subject = String.format("test data [%03d]", i);
             String content = "test" + i;
-            this.questionService.create(subject, content);
+            this.questionService.create(subject, content, null);
         }
 
     }

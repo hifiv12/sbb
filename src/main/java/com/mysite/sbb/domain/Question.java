@@ -25,6 +25,8 @@ public class Question {
 
     private LocalDateTime createDate; // camelCase가 snake_case로 실제 테이블명으로 반영
 
+    private LocalDateTime modifyDate;
+
     @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE) // 질문 하나에는 여러 답변, 그래서 질문이 삭제되면 답변 전부를 같이 삭제
     private List<Answer> answerList;
     // Question을 참조한 것이 왜 question으로 명시해야되는걸까? 일반적인 레퍼런스 변수를 쓸때랑 비슷한건가
