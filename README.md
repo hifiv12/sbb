@@ -95,12 +95,35 @@
       + @PreAuthorize
       + @GetMapping
       + answerModify(...)
-    * answer_form.html
     * AnswerController
+      + @PreAuthorize
+      + @GetMapping
+      + answerModify(...)
+    * answer_form.html
+      + th:action이 없는 form
+      + hidden 속성의 _csrf.parameterName, _csrf.token을 따로 생성
+        - 현재 요청된 URL로 폼 전송을 하기 위한 작업
+    * AnswerController
+      + post url mapping
+      + answerForm 을 통한 인증
+      + answer서비스 객체 조회 후 answer 객체 저장
+      + 로긴 정보와 게시글 아이디 비교
+      + service.modify()
+      + 리다이렉트
     * 답변 수정 확인
+      + 확인 완료
   - 답변 삭제
     * 답변 삭제 버튼
+      + 수정과 동일
     * AnswerService
+      + delete(answer)
     * AnswerController
+      + 로그인 정보와 uri id 값 넣기
+      + answer 객체 조회
+      + answer 객체의 유저네임과 로그인 정보 유저네임을 비교
+      + 삭제 서비스 실행
+      + 리다이렉트
     * 답변 삭제 확인
+      + 확인 완료
   - 수정일시 표시하기
+    * question_detail.html
