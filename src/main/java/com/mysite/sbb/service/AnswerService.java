@@ -49,4 +49,10 @@ public class AnswerService {
 
     }
 
+    public void delete(Answer answer) {
+
+        this.answerRepository.delete(answer);
+
+    }
+
 }
