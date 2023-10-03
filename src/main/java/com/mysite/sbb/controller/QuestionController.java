@@ -36,10 +36,11 @@ public class QuestionController {
     private final UserService userService;
 
     @GetMapping("/list")
-    public String list(Model model, @RequestParam(value="page", defaultValue="0") int page) { 
+    public String list(Model model, @RequestParam(value="page", defaultValue="0") int page,
+    @RequestParam(value = "kw", defaultValue = "") String kw) { 
         // 모델 객체는 템플릿과 자바 클래스간 연결
         // URL에 따라 page가 전달되지 않으면 defaultValut를 0 으로 
-        Page<Question> paging = this.questionService.getList(page);
+        Page<Question> paging = this.questionService.getList(page, kw);
         model.addAttribute("paging", paging);
         return "question_list";
     }

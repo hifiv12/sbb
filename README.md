@@ -127,3 +127,35 @@
       + 확인 완료
   - 수정일시 표시하기
     * question_detail.html
+
+13. 마크다운
+  - 마크다운 문법
+    * 리스트
+      + \*, \-, \+, 
+    * 강조
+      + \*\*강조\*\* 
+    * 링크
+      + \[link name\]\(link url\)
+    * 소스 코드
+      + '''
+        '''
+    * 인용
+      + \> 인용
+  - 마크다운 설치
+    + implementation 'org.commonmark:commonmark:0.21.0'
+    + 스프링 부트가 내부적으로 관리하지 않는 라이브러리는 버전 정보가 필요
+  - 마크다운 컴포넌트
+  - 템플릿에 마크다운 적용
+    + question_detail.html
+      - tx:utext -> 태그들이 escape 처리되어 그대로 화면에 보여짐
+  - 마크다운 확인
+
+14. 검색
+  - 검색 기능
+    * Specification
+    * QuestionRepository
+    * QuestionService
+    * QuestionController
+  - 검색 화면
+  - 검색 확인
+  - @Query
